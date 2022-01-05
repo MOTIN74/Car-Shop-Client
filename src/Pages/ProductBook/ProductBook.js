@@ -16,7 +16,7 @@ const ProductBook = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8000/products')
+        fetch('https://pacific-beach-70694.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -25,7 +25,7 @@ const ProductBook = () => {
 
     /* send to server order */
     const onSubmit = data => {
-        axios.post('http://localhost:8000/orders', data, data.status = 'pending')
+        axios.post('https://pacific-beach-70694.herokuapp.com/orders', data, data.status = 'pending')
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Added successfully")

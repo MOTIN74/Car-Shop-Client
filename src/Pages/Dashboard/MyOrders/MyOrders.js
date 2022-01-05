@@ -12,7 +12,7 @@ const MyOrders = () => {
 
     /*send to server */
     useEffect(() => {
-        fetch('http://localhost:8000/orders')
+        fetch('https://pacific-beach-70694.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [deleted])
@@ -21,7 +21,7 @@ const MyOrders = () => {
     const handleDeleteOrder = (id) => {
         const proceed = window.confirm('Are you confirm to cancel booking?');
         if (proceed) {
-            const url = `http://localhost:8000/orders/${id}`
+            const url = `https://pacific-beach-70694.herokuapp.com/orders/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

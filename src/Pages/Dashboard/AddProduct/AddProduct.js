@@ -9,7 +9,7 @@ const AddProduct = () => {
     /* take input and send to server */
     const onSubmit = data => {
         //console.log(data)
-        axios.post('http://localhost:8000/products', data)
+        axios.post('https://pacific-beach-70694.herokuapp.com/products', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Added successfully")

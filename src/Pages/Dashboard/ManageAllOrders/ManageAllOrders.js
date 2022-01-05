@@ -12,7 +12,7 @@ const ManageAllOrders = () => {
 
     /* take input and send to server */
     useEffect(() => {
-        fetch('http://localhost:8000/orders')
+        fetch('https://pacific-beach-70694.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [deleted])
@@ -21,7 +21,7 @@ const ManageAllOrders = () => {
     const handleDeleteOrder = (id) => {
         const proceed = window.confirm('Are you confirm to cancel booking?');
         if (proceed) {
-            const url = `http://localhost:8000/orders/${id}`
+            const url = `https://pacific-beach-70694.herokuapp.com/orders/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
@@ -39,7 +39,7 @@ const ManageAllOrders = () => {
     // handle order status
     const handleStatus = (id) => {
         const object = { status: 'shipped' }
-        fetch(`http://localhost:8000/orders/${id}`, {
+        fetch(`https://pacific-beach-70694.herokuapp.com/orders/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
