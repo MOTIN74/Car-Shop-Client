@@ -22,7 +22,7 @@ const News = () => {
 
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            <Grid item xs={4} sm={8} md={4}>
+            <Grid data-aos="fade-down" item xs={4} sm={8} md={4}>
               <Card sx={{ boxShadow: "1px 2px 10px rgba(0,0,0,0.1)" }}>
                 <CardActionArea>
                   <Box sx={{ overflow: "hidden" }}>
@@ -49,7 +49,7 @@ const News = () => {
                 </CardActionArea>
               </Card>
             </Grid>
-            <Grid item xs={4} sm={8} md={4}>
+            <Grid data-aos="fade-right" item xs={4} sm={8} md={4}>
               <Card sx={{ boxShadow: "1px 2px 10px rgba(0,0,0,0.1)" }}>
                 <CardActionArea>
                   <Box sx={{ overflow: "hidden" }}>
@@ -77,7 +77,7 @@ const News = () => {
                 </CardActionArea>
               </Card>
             </Grid>
-            <Grid item xs={4} sm={8} md={4}>
+            <Grid data-aos="fade-up" item xs={4} sm={8} md={4}>
               <Card sx={{ boxShadow: "1px 2px 10px rgba(0,0,0,0.1)" }}>
                 <CardActionArea>
                   <Box sx={{ overflow: "hidden" }}>
